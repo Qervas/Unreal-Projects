@@ -1,0 +1,868 @@
+{
+	"folders": [
+		{
+			"name": "Gunner",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Gunner Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"Debug",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"Debug",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Gunner Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"Debug",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"DebugGame",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"DebugGame",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Gunner Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"DebugGame",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"Development",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"Development",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Gunner Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"Development",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"Test",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"Test",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Gunner Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"Test",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"Shipping",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"Shipping",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Gunner Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"Linux",
+					"Shipping",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"Debug",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"Debug",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Gunner LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"Debug",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Gunner LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"DebugGame",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"Development",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"Development",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Gunner LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"Development",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"Test",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"Test",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Gunner LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"Test",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"Shipping",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"Shipping",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"Gunner LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "Gunner LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"Gunner",
+					"LinuxArm64",
+					"Shipping",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "GunnerEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"GunnerEditor",
+					"Linux",
+					"Debug",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "GunnerEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"GunnerEditor",
+					"Linux",
+					"Debug",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"GunnerEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "GunnerEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"GunnerEditor",
+					"Linux",
+					"Debug",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "GunnerEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"GunnerEditor",
+					"Linux",
+					"DebugGame",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "GunnerEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"GunnerEditor",
+					"Linux",
+					"DebugGame",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"GunnerEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "GunnerEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"GunnerEditor",
+					"Linux",
+					"DebugGame",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "GunnerEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"GunnerEditor",
+					"Linux",
+					"Development",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "GunnerEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"GunnerEditor",
+					"Linux",
+					"Development",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"GunnerEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			},
+			{
+				"label": "GunnerEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"GunnerEditor",
+					"Linux",
+					"Development",
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch Gunner (Debug)",
+				"request": "launch",
+				"program": "/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Binaries/Linux/UnrealGame-Linux-Debug",
+				"preLaunchTask": "Gunner Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch Gunner (DebugGame)",
+				"request": "launch",
+				"program": "/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Binaries/Linux/UnrealGame-Linux-DebugGame",
+				"preLaunchTask": "Gunner Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch Gunner (Development)",
+				"request": "launch",
+				"program": "/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Binaries/Linux/UnrealGame",
+				"preLaunchTask": "Gunner Linux Development Build",
+				"args": [
+				],
+				"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch Gunner (Test)",
+				"request": "launch",
+				"program": "/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Binaries/Linux/UnrealGame-Linux-Test",
+				"preLaunchTask": "Gunner Linux Test Build",
+				"args": [
+				],
+				"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch Gunner (Shipping)",
+				"request": "launch",
+				"program": "/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Binaries/Linux/UnrealGame-Linux-Shipping",
+				"preLaunchTask": "Gunner Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch GunnerEditor (Debug)",
+				"request": "launch",
+				"program": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "GunnerEditor Linux Debug Build",
+				"args": [
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject"
+				],
+				"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch GunnerEditor (DebugGame)",
+				"request": "launch",
+				"program": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "GunnerEditor Linux DebugGame Build",
+				"args": [
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject"
+				],
+				"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch GunnerEditor (Development)",
+				"request": "launch",
+				"program": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "GunnerEditor Linux Development Build",
+				"args": [
+					"/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject"
+				],
+				"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1",
+				"type": "cppdbg",
+				"visualizerFile": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/home/frankyin/Documents/GitHub/Unreal-Projects/Gunner/Gunner.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/home/frankyin/Application/Linux_Unreal_Engine_5.3.1"
+			}
+		]
+	}
+}
